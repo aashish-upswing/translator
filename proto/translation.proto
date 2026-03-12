@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package translation;
+
+service TranslationEngine {
+  rpc TranslateText (TranslateRequest) returns (TranslateReply) {}
+  rpc GetSupportedLanguages (GetLanguagesRequest) returns (GetLanguagesReply) {}
+}
+
+message TranslateRequest {
+  string text = 1;
+  string source_lang = 2; // e.g., 'en'
+  string target_lang = 3; // e.g., 'ar'
+}
+
+message TranslateReply {
+  string translated_text = 1;
+  bool success = 2;
+  string error_message = 3;
+}
+
+message GetLanguagesRequest {
+}
+
+message GetLanguagesReply {
+  repeated Language languages = 1;
+}
+
+message Language {
+  string code = 1; // e.g., 'ar'
+  string name = 2; // e.g., 'Arabic'
+}

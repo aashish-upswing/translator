@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+msgid "Hello"
+msgstr "مرحبا"
+
+msgid "Welcome"
+msgstr "أهلاً بك"
+
+msgid "Translation Application"
+msgstr "تطبيق الترجمة"
+
+msgid "Select Language"
+msgstr "اختر اللغة"
+
+msgid "Translate"
+msgstr "ترجم"
+
+msgid "Source Text"
+msgstr "نص المصدر"
+
+msgid "Target Text"
+msgstr "النص المترجم"
+
+msgid "Good morning"
+msgstr "صباح الخير"
+
+msgid "Good evening"
+msgstr "مساء الخير"
+
+msgid "Thank you"
+msgstr "شكرا لك"
