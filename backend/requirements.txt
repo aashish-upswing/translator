@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+grpcio
+grpcio-tools
+protobuf
+argostranslate
+ctranslate2
+sentencepiece

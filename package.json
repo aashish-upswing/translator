@@ -1,0 +1,25 @@
+{
+  "name": "translator-monorepo",
+  "version": "1.0.0",
+  "description": "LinguaSync - Neural Machine Translation Monorepo (FastAPI + gRPC + Angular)",
+  "private": true,
+  "scripts": {
+    "install:backend": "cd backend && python -m venv venv && .\\venv\\Scripts\\activate && pip install -r requirements.txt",
+    "install:proto": "backend\\venv\\Scripts\\python -m grpc_tools.protoc -I proto --python_out=backend --pyi_out=backend --grpc_python_out=backend proto/translation.proto",
+    "install:models": "backend\\venv\\Scripts\\python backend\\install_models.py",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:proto && npm run install:models && npm run install:frontend",
+
+    "start:grpc": "cd backend && .\\venv\\Scripts\\activate && python grpc_server.py",
+    "start:api": "cd backend && .\\venv\\Scripts\\activate && uvicorn main:app --port 8000",
+    "start:frontend": "cd frontend && npx @angular/cli serve --port 4200",
+
+    "dev": "concurrently -n grpc,api,web -c cyan,magenta,green \"npm run start:grpc\" \"npm run start:api\" \"npm run start:frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": ["translation", "grpc", "fastapi", "angular", "ctranslate2"],
+  "license": "MIT"
+}

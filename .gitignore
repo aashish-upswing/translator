@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Generated protobuf code
+backend/translation_pb2.py
+backend/translation_pb2_grpc.py
+backend/translation_pb2.pyi
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+frontend/dist/
+frontend/.angular/
+
+# Lock files (keep package-lock at root and frontend)
+# package-lock.json
